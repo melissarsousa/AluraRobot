@@ -1,86 +1,83 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 7.1.1 (Python 3.13.1 on win32)" generated="2024-12-24T09:42:04.059078" rpa="false" schemaversion="5">
+<robot generator="Robot 7.1.1 (Python 3.13.1 on win32)" generated="2024-12-24T10:18:30.227377" rpa="false" schemaversion="5">
 <suite id="s1" name="primeiroTeste" source="C:\Users\melis\OneDrive\Documentos\VSCode Projects\AluraRobot\primeiroTeste.robot">
-<test id="s1-t1" name="Abrir navegador e acessar o site do organo" line="6">
+<test id="s1-t1" name="Verificar preenchimento do formulário e criação correta do card" line="17">
+<kw name="Dado que eu acesse o Organo">
 <kw name="Open Browser" owner="SeleniumLibrary">
-<msg time="2024-12-24T09:42:04.383825" level="INFO">Opening browser 'Chrome' to base url 'http://localhost:3000/'.</msg>
-<arg>url=http://localhost:3000/</arg>
+<msg time="2024-12-24T10:18:30.507553" level="INFO">Opening browser 'Chrome' to base url 'http://localhost:3000/'.</msg>
+<arg>url=${URL}</arg>
 <arg>browser=Chrome</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<status status="PASS" start="2024-12-24T09:42:04.383501" elapsed="1.997320"/>
+<status status="PASS" start="2024-12-24T10:18:30.507332" elapsed="2.007010"/>
 </kw>
-<status status="PASS" start="2024-12-24T09:42:04.382089" elapsed="1.999076"/>
-</test>
-<test id="s1-t2" name="Preencher os campos do formulário" line="9">
+<status status="PASS" start="2024-12-24T10:18:30.506717" elapsed="2.007890"/>
+</kw>
+<kw name="E preencha os campos do formulário">
 <kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2024-12-24T09:42:06.384018" level="INFO">Typing text 'Melissa' into text field 'id:form-nome'.</msg>
-<arg>id:form-nome</arg>
-<arg>Melissa</arg>
+<msg time="2024-12-24T10:18:32.516682" level="INFO">Typing text 'Akemi' into text field 'id:form-nome'.</msg>
+<arg>${CAMPO_NOME}</arg>
+<arg>Akemi</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2024-12-24T09:42:06.383181" elapsed="0.210798"/>
+<status status="PASS" start="2024-12-24T10:18:32.515622" elapsed="0.124378"/>
 </kw>
 <kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2024-12-24T09:42:06.595164" level="INFO">Typing text 'QA' into text field 'id:form-cargo'.</msg>
-<arg>id:form-cargo</arg>
-<arg>QA</arg>
+<msg time="2024-12-24T10:18:32.640446" level="INFO">Typing text 'Desenvolvedora' into text field 'id:form-cargo'.</msg>
+<arg>${CAMPO_CARGO}</arg>
+<arg>Desenvolvedora</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2024-12-24T09:42:06.594741" elapsed="0.123377"/>
+<status status="PASS" start="2024-12-24T10:18:32.640168" elapsed="0.096178"/>
 </kw>
 <kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2024-12-24T09:42:06.718549" level="INFO">Typing text 'https://picsum.photos/200/300' into text field 'id:form-imagem'.</msg>
-<arg>id:form-imagem</arg>
+<msg time="2024-12-24T10:18:32.736733" level="INFO">Typing text 'https://picsum.photos/200/300' into text field 'id:form-imagem'.</msg>
+<arg>${CAMPO_IMAGEM}</arg>
 <arg>https://picsum.photos/200/300</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2024-12-24T09:42:06.718384" elapsed="0.149557"/>
+<status status="PASS" start="2024-12-24T10:18:32.736517" elapsed="0.111361"/>
 </kw>
 <kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2024-12-24T09:42:06.868573" level="INFO">Clicking element 'class:lista-suspensa'.</msg>
-<arg>class:lista-suspensa</arg>
+<msg time="2024-12-24T10:18:32.848278" level="INFO">Clicking element 'class:lista-suspensa'.</msg>
+<arg>${CAMPO_TIME}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2024-12-24T09:42:06.868310" elapsed="0.077764"/>
+<status status="PASS" start="2024-12-24T10:18:32.848057" elapsed="0.073874"/>
 </kw>
 <kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2024-12-24T09:42:06.946942" level="INFO">Clicking element '//option[contains(.,'Programação')]'.</msg>
-<arg>//option[contains(.,'Programação')]</arg>
+<msg time="2024-12-24T10:18:32.922631" level="INFO">Clicking element '//option[contains(.,'Programação')]'.</msg>
+<arg>${OPCAO_PROGRAMACAO}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2024-12-24T09:42:06.946545" elapsed="0.038415"/>
+<status status="PASS" start="2024-12-24T10:18:32.922282" elapsed="0.040920"/>
 </kw>
-<kw name="Sleep" owner="BuiltIn">
-<msg time="2024-12-24T09:42:11.986782" level="INFO">Slept 5 seconds.</msg>
-<arg>5s</arg>
-<doc>Pauses the test executed for the given time.</doc>
-<status status="PASS" start="2024-12-24T09:42:06.985307" elapsed="5.001599"/>
+<status status="PASS" start="2024-12-24T10:18:32.515131" elapsed="0.448204"/>
 </kw>
+<kw name="E clique no botão criar card">
 <kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2024-12-24T09:42:11.987546" level="INFO">Clicking element 'id:form-botao'.</msg>
-<arg>id:form-botao</arg>
+<msg time="2024-12-24T10:18:32.964517" level="INFO">Clicking element 'id:form-botao'.</msg>
+<arg>${BOTAO_CARD}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2024-12-24T09:42:11.987344" elapsed="0.066129"/>
+<status status="PASS" start="2024-12-24T10:18:32.964254" elapsed="0.094380"/>
 </kw>
+<status status="PASS" start="2024-12-24T10:18:32.963847" elapsed="0.094899"/>
+</kw>
+<kw name="Então identificar o card no time esperado">
 <kw name="Element Should Be Visible" owner="SeleniumLibrary">
-<msg time="2024-12-24T09:42:12.076220" level="INFO">Element 'class:colaborador' is displayed.</msg>
-<arg>class:colaborador</arg>
+<msg time="2024-12-24T10:18:33.081987" level="INFO">Element 'class:colaborador' is displayed.</msg>
+<arg>${CONFIRMA_CARD}</arg>
 <doc>Verifies that the element identified by ``locator`` is visible.</doc>
-<status status="PASS" start="2024-12-24T09:42:12.053908" elapsed="0.022446"/>
+<status status="PASS" start="2024-12-24T10:18:33.059361" elapsed="0.022882"/>
 </kw>
-<kw name="Sleep" owner="BuiltIn">
-<msg time="2024-12-24T09:42:17.077432" level="INFO">Slept 5 seconds.</msg>
-<arg>5s</arg>
-<doc>Pauses the test executed for the given time.</doc>
-<status status="PASS" start="2024-12-24T09:42:12.076894" elapsed="5.000805"/>
+<status status="PASS" start="2024-12-24T10:18:33.059058" elapsed="0.023470"/>
 </kw>
-<status status="PASS" start="2024-12-24T09:42:06.382383" elapsed="10.696151"/>
+<status status="PASS" start="2024-12-24T10:18:30.505948" elapsed="2.577042"/>
 </test>
-<status status="PASS" start="2024-12-24T09:42:04.060709" elapsed="13.019421"/>
+<status status="PASS" start="2024-12-24T10:18:30.228648" elapsed="2.854941"/>
 </suite>
 <statistics>
 <total>
-<stat pass="2" fail="0" skip="0">All Tests</stat>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
 </total>
 <tag>
 </tag>
 <suite>
-<stat pass="2" fail="0" skip="0" id="s1" name="primeiroTeste">primeiroTeste</stat>
+<stat pass="1" fail="0" skip="0" id="s1" name="primeiroTeste">primeiroTeste</stat>
 </suite>
 </statistics>
 <errors>
