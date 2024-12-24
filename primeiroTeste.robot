@@ -18,7 +18,7 @@ Verificar preenchimento do formulário e criação correta do card
      Dado que eu acesse o Organo
      E preencha os campos do formulário
      Quando eu clicar no botão criar card
-     Então identificar o card no time esperado
+     Então o card deve estar no time esperado
 
 *** Keywords ***
 
@@ -35,5 +35,5 @@ E preencha os campos do formulário
 Quando eu clicar no botão criar card    
     Click Element    ${BOTAO_CARD}
 
-Então identificar o card no time esperado
+Então o card deve estar no time esperado
     Element Should Be Visible    ${CONFIRMA_CARD}
