@@ -88,10 +88,6 @@ Quando eu clicar no botão criar card com diferentes times
         Quando eu clicar no botão criar card
     END
 Então os cards devem ser identificados em times diferentes     
-    Element Should Be Visible    //*[@id="root"]/div/section[2]/div
-    Element Should Be Visible    //*[@id="root"]/div/section[3]/div
-    Element Should Be Visible    //*[@id="root"]/div/section[4]/div
-    Element Should Be Visible    //*[@id="root"]/div/section[5]/div
-    Element Should Be Visible    //*[@id="root"]/div/section[6]/div
-    Element Should Be Visible    //*[@id="root"]/div/section[7]/div
-    Element Should Be Visible    //*[@id="root"]/div/section[8]/div
+    FOR    ${index}    IN RANGE    2    9
+        Element Should Be Visible    xpath=//*[@id="root"]/div/section[${index}]/div
+    END
